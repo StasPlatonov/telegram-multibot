@@ -1,6 +1,5 @@
 # tg-multibot
-
-Multi-purpose Telegram bot.
+Multi-purpose Telegram bot
 
 Functions:
 1. Comiing soon movies list from kinopoisk.ru (Russia specific)
