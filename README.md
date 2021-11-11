@@ -11,6 +11,9 @@ Functions:
 7. Get products and prices information by QR link from payed cheque from nalog.ru
 8. Some test functions (that may not work well yet =))
 
+Ready to launch from PyCharm IDE or with following command line:
+python main.py
+
 
 Requirements
 1. ".env" file in the root (that contains some credential information to login to nalog.ru site) of type:
