@@ -13,13 +13,11 @@ Functions:
 
 
 Requirements
-1. ".env" file in the root of type:
+1. ".env" file in the root (that contains some credential information to login to nalog.ru site) of type:
 CLIENT_SECRET=
 INN=
 PASSWORD=
-
-that contains some credential information to login to nalog.ru site
-2. Environment variables
+2. Environment variables:
 TOKEN - Telegram bot token
 CHAT_ID - Telegram chat id
 DATABASE_URL - Test postgres database
