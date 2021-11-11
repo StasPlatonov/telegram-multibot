@@ -1,0 +1,12 @@
+apscheduler~=3.6.3
+requests~=2.25.1
+python-telegram-bot
+lxml
+beautifulsoup4~=4.9.3
+grab
+psycopg2
+sqlalchemy~=1.4.9
+pytube
+moviepy~=1.0.3
+pillow~=8.2.0
+python-dotenv~=0.17.0

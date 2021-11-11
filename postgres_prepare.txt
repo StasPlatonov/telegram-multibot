@@ -1,0 +1,44 @@
+Setup postgres
+  sudo apt install postgresql postgresql-contrib
+
+Switch to postgres user (to execute all commands) or use 'sudo -u postgres <command>'
+  sudo -i -u postgres
+  
+Use psql to open CLI and \q to exit CLI
+
+Create new user
+  sudo -u postgres createuser --interactive
+  
+Setup password (in psql)
+  alter user <username> with encrypted password '<password>';
+  
+Create database
+  sudo -u postgres createdb <name>
+
+As an alternative, use this commands for creating database and users via pure psql
+  CREATE DATABASE yourdbname;
+  CREATE USER youruser WITH ENCRYPTED PASSWORD 'yourpass';
+  GRANT ALL PRIVILEGES ON DATABASE yourdbname TO youruser;
+
+Grant permissions (in psql)
+  grant all privileges on database <dbname> to <username>;
+
+Allow connections by IP from other computers
+  Add to file /etc/postgresql/12/main/pg_hba.conf
+    host    all         all         192.168.101.20/24    trust
+    
+  Add to file /etc/postgresql/12/main/postgresql.conf    
+    listen_addresses = '*'
+
+  Restart service after
+    systemctl restart postgresql
+    
+You may set PGHOST=<ip> and connect (without specifying host every time)
+  psql -U postgres
+  
+Connect to database
+psql -h <ip> <table> <user>
+
+
+
+ 
