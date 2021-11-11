@@ -1,6 +1,8 @@
 # tg-multibot
 Multi-purpose Telegram bot
 
+Important! Project is not a ready to complile. Some files are missing. For code examples only.
+
 Functions:
 1. Comiing soon movies list from kinopoisk.ru (Russia specific)
 2. TV program (not finished yet) from mail.ru (Russia specific)
