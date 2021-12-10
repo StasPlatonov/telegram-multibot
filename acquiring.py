@@ -21,16 +21,16 @@ logger = logging.getLogger(__name__)
 class AcquiringModule(object):
     def __init__(self, bot):
         self.Bot = bot
-        self.PSDB_URL = 'http://192.168.56.1:8888'
+        self.TARGET_URL = 'http://192.168.56.1:8888'
 
     @staticmethod
     def get_menu(lang):
         inline_keyboard = [
             [
-                InlineKeyboardButton(Common.bar_chart + 'Статистика АС СУС POS', callback_data='bt_psdb_stat_menu'),
+                InlineKeyboardButton(Common.bar_chart + 'Статистика 1', callback_data='bt_psdb_stat_menu'),
             ],
             [
-                InlineKeyboardButton(Common.construction_icon + 'Статистика АС PServer', callback_data='bt_pserver_stat_menu'),
+                InlineKeyboardButton(Common.construction_icon + 'Статистика 2', callback_data='bt_pserver_stat_menu'),
             ],
             [
                 InlineKeyboardButton(Common.exclamation_icon + 'Уведомления', callback_data='bt_aquiring_notify_menu'),
@@ -86,7 +86,7 @@ class AcquiringModule(object):
 
         try:
             # ----------  request current metrics data from psdb service
-            current_stat_url = self.PSDB_URL + '/data'
+            current_stat_url = self.TARGET_URL + '/data'
             headers = {
                 'Accept': 'application/json',
             }
@@ -113,7 +113,7 @@ class AcquiringModule(object):
             chart_width = 1000
             chart_height = 500
 
-            # img_url_charts = self.PSDB_URL + '/tg_charts?days=' + days
+            # img_url_charts = self.TARGET_URL + '/tg_charts?days=' + days
             time_to = AcquiringModule.get_current_time()
             time_from = time_to - hours * 60 * 60 * 1000
             #time_from = time_to - 5 * 60 * 1000
@@ -148,7 +148,7 @@ class AcquiringModule(object):
             self.Bot.send_photo(
                 user.id,
                 photo=img_response.content,
-                caption='БД СУС POS',
+                caption='БД',
                 parse_mode=ParseMode.HTML
             )
 
@@ -165,7 +165,7 @@ class AcquiringModule(object):
             self.Bot.send_photo(
                 user.id,
                 photo=img_response.content,
-                caption='Терминалы',
+                caption='Параметр1',
                 parse_mode=ParseMode.HTML
             )
 
@@ -182,7 +182,7 @@ class AcquiringModule(object):
             self.Bot.send_photo(
                 user.id,
                 photo=img_response.content,
-                caption='Регистрации',
+                caption='Параметр2',
                 parse_mode=ParseMode.HTML
             )
 
