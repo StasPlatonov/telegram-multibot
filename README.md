@@ -1,7 +1,7 @@
 # tg-multibot
 Multi-purpose Telegram bot
 
-Important! It is not a ready-to-complile project.
+Important! It is not a ready-to-complile project. Can be used for technology information.
 
 Functions:
 1. Comiing soon movies list from kinopoisk.ru (Russia specific)
@@ -26,3 +26,4 @@ TOKEN - Telegram bot token
 CHAT_ID - Telegram chat id
 DATABASE_URL - Test postgres database
 OPENWEATHER_TOKEN - Openweather token
+3. Change some IP addresses in sources to postgreSQL database or other sources
