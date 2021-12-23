@@ -1,13 +1,13 @@
 # tg-multibot
 Multi-purpose Telegram bot
 
-Important! It is not a ready-to-complile project. Can be used for technology information.
+Important! It is not a ready-to-complile project. Can be used as example of python tg bot features
 
 Functions:
-1. Comiing soon movies list from kinopoisk.ru (Russia specific)
+1. Coming soon movies list from kinopoisk.ru (Russia specific)
 2. TV program (not finished yet) from mail.ru (Russia specific)
 3. Shows current weather and forecast by attached geo-location
-4. Convert attached videos to gif (may not work well yet =))
+4. Convert attached short (2-4 seconds) videos to gif (may not work well yet =))
 6. Converts attached imaged to ascii
 7. Get products and prices information by QR link from payed cheque from nalog.ru
 8. Some test functions (that may not work well yet =))
