@@ -5,15 +5,12 @@ from model import ModelCreator, User
 import messages as texts
 import logging
 
-# Enable logging
-logging.basicConfig(
-    format='%(asctime)s [%(thread)d] %(name)s[%(levelname)s]: %(message)s', level=logging.INFO
-)
-
 logger = logging.getLogger(__name__)
+
 
 class SmartStorage(object):
     def __init__(self, url):
+        logger.info('Creating SmartStorage...')
         self.URL = url
         self.engine = create_engine(self.URL)
         self.sessionMaker = sessionmaker(bind=self.engine)

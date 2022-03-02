@@ -7,6 +7,6 @@ grab
 psycopg2
 sqlalchemy~=1.4.9
 pytube
-moviepy~=1.0.3
-pillow~=8.2.0
+moviepy
+pillow
 python-dotenv~=0.17.0

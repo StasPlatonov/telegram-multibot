@@ -39,16 +39,12 @@ import weather
 
 import json
 import random
+
 '''
 Limitations:
     Messages can be sent to the same chat with frequency of not more than 20 messages per minute
     Messages can be sent to different chats with frequency of not more than 30 messages per second 
 '''
-
-# Enable logging
-logging.basicConfig(
-    format='%(asctime)s [%(thread)d] %(name)s[%(levelname)s]: %(message)s', level=logging.INFO
-)
 
 logger = logging.getLogger(__name__)
 # ----------------------------------------------------------------------------
@@ -56,6 +52,7 @@ logger = logging.getLogger(__name__)
 
 class EchoBot(object):
     def __init__(self):
+        logger.info("info: Starting Echobot...")
         self.updater = Updater(os.environ["TOKEN"], use_context=True, workers=32)
 
         # Get the dispatcher to register handlers
@@ -860,5 +857,5 @@ class EchoBot(object):
         # start_polling() is non-blocking and will stop the bot gracefully.
         self.updater.idle()
 
-        self.scheduler.shutdown()
+        #self.scheduler.shutdown()
     # ----------------------------------------------------------------------------

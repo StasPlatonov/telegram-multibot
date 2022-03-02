@@ -2,12 +2,8 @@ from PIL import Image, ImageDraw, ImageFont, ImageEnhance
 import math
 import logging
 
-# Enable logging
-logging.basicConfig(
-    format='%(asctime)s [%(thread)d] %(name)s[%(levelname)s]: %(message)s', level=logging.INFO
-)
-
 logger = logging.getLogger(__name__)
+
 
 class AsciiProcessor(object):
     def __init__(self):
